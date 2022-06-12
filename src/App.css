@@ -83,8 +83,10 @@
 
 .w-50{
   width: 50%;
-  width: 50%;
   margin: 0%;
+}
+.w-100{
+  width: 100%;
 }
 
 .pr-20{
@@ -113,13 +115,16 @@
   font-weight: bold;
 }
 
+.btn-number{
+  color: #282c34;
+}
+
 .img-back{
   width: 100px;
   height: 100px;
 }
 
-/* #Hello{
-  background-color: #646464;
-} */
-
+.shadow{
+  box-shadow: 0px 0px 5px 1px black;
+}
 
