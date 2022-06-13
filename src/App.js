@@ -24,12 +24,12 @@ function App() {
   const [num2, setNum2] = useState(0);
   const [result, setResult] = useState(0);
 
-  // const [numbers, setNumbers] = useState([
-  //   {
-  //     number1: 0,
-  //     number: 2
-  //   },
-  // ]);
+  const [numbers, setNumbers] = useState([
+    {
+      number1: 0,
+      number: 2
+    },
+  ]);
 
   return (
     <div className="App">
@@ -58,6 +58,11 @@ function App() {
       </div>
         <button
           onClick={() => {
+            if(name === '' || lastName === ''){
+              console.log('Agrega los campos');
+              window.alert('Ingrese el nombre y apellido por favor')
+              return
+            }
             setPeople((current) => [{ name, lastName }, ...current]);
           }}
           className='btn-agregar-user'
