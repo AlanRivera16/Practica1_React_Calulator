@@ -1,5 +1,6 @@
 import './App.css';
 import image from "./sources/img-user.jpg"
+import imagec from "./sources/calculator.png"
 import React, {useState} from "react";
 
 //Cualquier lógica aquí afuera será global 
@@ -21,6 +22,7 @@ function App() {
   //const para input calculator
   const [num1, setNum1] = useState(0);
   const [num2, setNum2] = useState(0);
+  const [result, setResult] = useState(0);
 
   // const [numbers, setNumbers] = useState([
   //   {
@@ -28,11 +30,10 @@ function App() {
   //     number: 2
   //   },
   // ]);
-  const [result, setResult] = useState(0);
 
   return (
     <div className="App">
-      
+    <header className='bg-dark'><h1>PRÁCTICA 1 REACT</h1></header>
     <div>
       <div><img className='img-back' src={image} alt="USERIMG"/></div>
       <div className='d-block-custom'>
@@ -81,11 +82,12 @@ function App() {
     </div>
 
     <div>
-      <div><img className='img-back' src={image} alt="USERIMG"/></div>
-      <div className='d-block-custom shadow'>
+      <div><img className='img-back' src={imagec} alt="USERCAL"/></div>
+      <div className='bg-dark mx-20'><h2>CALCULADORA</h2></div>
+      <div className='d-block-custom no-padding-bottom'>
         <input
           type="number"
-          name="number1"
+          name="Número 1"
           className='input-custom'
           placeholder='numero 1'
           onChange={(event) => {
@@ -94,15 +96,16 @@ function App() {
         />
         <input
           type="number"
-          name="number2"
+          name="Número 2"
           className='input-custom'
           placeholder='numero 2'
           onChange={(event) => {
             setNum2(event.target.value);
           }}
         />
+        <h3>Resultado: {result}</h3>
       </div>
-      <div className='shadow'>
+      <div className='padding-bottom'>
         <button
           onClick={() => {
             setResult(((+num1)+(+num2)));
@@ -141,31 +144,56 @@ function App() {
           Dividir
         </button>
       </div>
-        <p>{result}</p>
+        {/* <p>{result}</p> */}
     </div>
 
     
-    <div id='Hello'>
+    {/* <div id='Hello'>
       <div className='m-custom'>
         <div>
           <table className='w-100'>
             <tr>
-              {/* <td colspan="4">0</td> */}
+              <td>{result}</td>
             </tr>
             <tr>
               <td>
                   <button
                     onClick={() => {
-                      setResult(((+num1) + (+num2)));
+                      if(cambio == true){
+                        setNum1(num1 = 1)
+                        console.log(num1);
+                      }
+                      setResult((num1) + 1)
+                      
                     }}
                     className='btn-number'
                   >
                     1
                   </button>
               </td>
-              <td>2</td>
+              <td
+              onClick={() => {
+                if(cambio == true){
+                  setNum1(num1 = 1)
+                  console.log(num1);
+                }
+                setResult((num1) + 2)
+                
+              }}
+              >
+              2
+              </td>
               <td>3</td>
-              <td>+</td>
+              <td
+               onClick={() => {
+                setCambio(true)
+                if(cambio == true){
+                  console.log('Se hizo el cambio');
+                }
+              }}
+              >
+              +
+              </td>
             </tr>
             <tr>
               <td>4</td>
@@ -191,7 +219,7 @@ function App() {
           </table>
         </div>
       </div>
-    </div>
+    </div> */}
 
     
   </div>

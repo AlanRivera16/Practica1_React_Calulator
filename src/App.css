@@ -63,6 +63,7 @@
   width: 100%;
   padding-top: 2%;
   padding-bottom: 2%;
+  
 }
 .mb-21{
   margin-bottom: 21.44px;
@@ -101,6 +102,7 @@
   border-bottom-right-radius: 8px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  text-align: center;
 }
 
 .btn-agregar-user{
@@ -116,7 +118,17 @@
 }
 
 .btn-number{
-  color: #282c34;
+  border: gray solid 1px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  /* padding: 10px; */
+  background-color: rgba(40, 44, 52, 255);
+  color: white;
+  font-weight: bold;
+  width: 60%;
+  height: 4vh;
 }
 
 .img-back{
@@ -126,5 +138,25 @@
 
 .shadow{
   box-shadow: 0px 0px 5px 1px black;
+}
+
+.border-radius{
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.mx-20{
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.no-padding-bottom{
+  padding-bottom: 0;
+}
+
+.padding-bottom{
+  padding-bottom: 5%;
 }
 
